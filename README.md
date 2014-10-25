@@ -8,14 +8,16 @@ Gyazo互換さーばっぽいの
 Require
 
 node.js
-`npm install formidable
-`npm install datauri
+`npm install formidable`
+`npm install datauri`
 
 Settings
-`vi ./config.js
+
+`vi ./config.js`
 
 Run
-`node ./server.js
+
+`node ./server.js`
 
 gyazowin+とかからIP:port/uploadに投げるとデータを保存するよ！
 
