@@ -9,7 +9,6 @@ Require
 
 node.js
 `npm install formidable`
-`npm install datauri`
 
 Settings
 
