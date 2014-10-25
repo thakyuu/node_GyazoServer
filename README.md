@@ -12,6 +12,8 @@ node.js
 
 Settings
 
+`rename ./config.js.default ./config.js`
+
 `vi ./config.js`
 
 Run
