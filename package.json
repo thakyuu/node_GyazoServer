@@ -1,0 +1,22 @@
+{
+  "name": "node_GyazoServer",
+  "version": "0.0.1",
+  "description": "node_GyazoServer",
+  "main": "server.js",
+  "dependencies": {
+    "formidable": "~1.0.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thakyuu/node_GyazoServer.git"
+  },
+  "author": "thakyuu",
+  "bugs": {
+    "url": "https://github.com/thakyuu/node_GyazoServer/issues"
+  },
+  "homepage": "https://github.com/thakyuu/node_GyazoServer"
+}
