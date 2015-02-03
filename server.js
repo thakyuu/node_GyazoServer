@@ -12,7 +12,11 @@ var server = http.createServer(function(req, res){
 
 		form.parse(req, function(err, fields, files){
 			console.log(files.imagedata.path);
-			res.end('http://' + config.host + ':' + config.port + '/' + files.imagedata.path.replace(/\\/, "/").replace(/\.png/, ".html"));
+			if(config.retport == '80'){
+				res.end('http://' + req.headers.host + '/' + files.imagedata.path.replace(/\\/, "/").replace(/\.png/, ".html"));
+			}else{
+				res.end('http://' + req.headers.host + ':' + config.retport + '/' + files.imagedata.path.replace(/\\/, "/").replace(/\.png/, ".html"));
+			}
 		});
 	}else if(req.url.match(/images\/([a-z0-9]+)\.html/)){
 		var imageFile = RegExp.$1;
@@ -28,7 +32,7 @@ var server = http.createServer(function(req, res){
 	}
 });
 server.listen(config.port);
-console.log('Server Start: ' + config.host + ':' + config.port);
+console.log('Server Start: *:' + config.port);
 
 process.on('uncaughtException', function (err) {
 	console.error(err);
